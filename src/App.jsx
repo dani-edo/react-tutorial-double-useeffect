@@ -6,7 +6,8 @@ let initialStories = [
   { id: 1, label: "Taylor's Story" },
 ];
 
-function App() {
+export default function App() {
+  let [stories, setStories] = useState(initialStories);
   return (
     <div
       style={{
@@ -15,9 +16,7 @@ function App() {
         textAlign: "center",
       }}
     >
-      <StoryTray stories={initialStories} />
+      <StoryTray stories={stories} />
     </div>
   );
 }
-
-export default App;
