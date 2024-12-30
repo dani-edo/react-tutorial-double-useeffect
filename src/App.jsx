@@ -39,8 +39,7 @@ export default function AnimalFriends() {
               key={animal.src}
               ref={(node) => {
                 const list = itemsRef.current;
-                const item = { animal: animal, node };
-                list.push(item);
+                list.push({ animal, node });
                 console.log(
                   `✅ Adding animal to the map. Total animals: ${list.length}`
                 );
@@ -49,7 +48,7 @@ export default function AnimalFriends() {
                 }
               }}
             >
-              <img src={animal.src} />
+              <img src={animal.src} style={{ width: "500px", height: "100%" }} />
             </li>
           ))}
         </ul>
@@ -63,13 +62,13 @@ function setupAnimalList() {
   for (let i = 0; i < 10; i++) {
     animalList.push({
       type: "cat",
-      src: "https://loremflickr.com/320/240/cat?lock=" + i,
+      src: "https://plus.unsplash.com/premium_photo-1707353402061-c31b6ba8562e?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" + i,
     });
   }
   for (let i = 0; i < 10; i++) {
     animalList.push({
       type: "dog",
-      src: "https://loremflickr.com/320/240/dog?lock=" + i,
+      src: "https://plus.unsplash.com/premium_photo-1668114375111-e90b5e975df6?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" + i,
     });
   }
 
