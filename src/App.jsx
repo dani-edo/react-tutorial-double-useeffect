@@ -43,9 +43,6 @@ export default function AnimalFriends() {
                 console.log(
                   `✅ Adding animal to the map. Total animals: ${list.length}`
                 );
-                if (list.length > 10) {
-                  console.log("❌ Too many animals in the list!");
-                }
               }}
             >
               <img src={animal.src} style={{ width: "500px", height: "100%" }} />
