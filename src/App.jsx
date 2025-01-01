@@ -12,21 +12,20 @@ class App extends React.Component {
   UNSAFE_componentWillMount() {
     console.log("UNSAFE_componentWillMount: Component is about to mount.");
     // perform initialize state
-    // perform fetch data
+    // code with side effect
+  }
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    console.log("UNSAFE_componentWillReceiveProps: New props received.");
+    console.log("Next Props:", nextProps);
+    // data fetching code or side effects
   }
 
   UNSAFE_componentWillUpdate(nextProps, nextState) {
     console.log("UNSAFE_componentWillUpdate: Component is about to update.");
     console.log("Next Props:", nextProps);
     console.log("Next State:", nextState);
-    // perform updates based on prop changes
-  }
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log("UNSAFE_componentWillReceiveProps: New props received.");
-    console.log("Next Props:", nextProps);
-    // state updates based on props
-    // side effects based on prop changes
+    // data fetching code or side effects
   }
 
   componentDidMount() {
